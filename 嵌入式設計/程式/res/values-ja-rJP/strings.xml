@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">帳簿</string>
+    <string-array name="type">
+        <item>食物</item>
+        <item>交通</item>
+        <item>娯楽</item>
+        <item>衣類</item>
+        <item>その他</item>
+        <item>収入</item>
+    </string-array>
+    <string name="date">日付</string>
+    <string name="dateset">日付設定</string>
+    <string name="dateNotset">設定していません</string>
+    <string name="type">分類</string>
+    <string name="name">名称</string>
+    <string name="price">金額</string>
+    <string name="insert">増加</string>
+    <string name="update">改正</string>
+    <string name="delete">削除</string>
+    <string name="search">検索</string>
+    <string name="DialogMessage">検索の方法を選んでください</string>
+    <string name="cancel">キャンセル</string>
+    <string name="Notfound">データがありません</string>
+    <string name="total">合計額</string>
+
+    <string name="diet">食物</string>
+    <string name="traffic">交通</string>
+    <string name="entertainment">娯楽</string>
+    <string name="clothing">衣類</string>
+    <string name="others">その他</string>
+    <string name="income">収入</string>
+    <string name="outcome">支出</string>
+
+    <string name="inputName">名称を入力</string>
+    <string name="inputPrice">金額を入力</string>
+
+</resources>

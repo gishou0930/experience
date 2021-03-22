@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Accounting book</string>
+    <string-array name="type">
+        <item>Diet</item>
+        <item>Traffic</item>
+        <item>Entertainment</item>
+        <item>Clothing</item>
+        <item>Others</item>
+        <item>Income</item>
+    </string-array>
+    <string name="date">date</string>
+    <string name="dateset">SetDate</string>
+    <string name="dateNotset">NotSet</string>
+    <string name="type">type</string>
+    <string name="name">name</string>
+    <string name="price">price</string>
+    <string name="insert">insert</string>
+    <string name="update">update</string>
+    <string name="delete">delete</string>
+    <string name="search">search</string>
+    <string name="DialogMessage">please choose search way</string>
+    <string name="cancel">cancel</string>
+    <string name="Notfound">No data</string>
+    <string name="total">total</string>
+
+    <string name="diet">Diet</string>
+    <string name="traffic">Traffic</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="clothing">Clothing</string>
+    <string name="others">Others</string>
+    <string name="income">Income</string>
+    <string name="outcome">Outcome</string>
+
+    <string name="inputName">inputName</string>
+    <string name="inputPrice">inputPrice</string>
+
+</resources>
