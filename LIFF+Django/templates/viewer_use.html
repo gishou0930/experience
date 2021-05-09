@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>訂單</title>
+	<style>
+    .form{
+		display: inline-block;
+		border: solid 1px black;
+		border-radius: 5px;
+
+		padding: 10px;
+		padding-right: 20px;
+		padding-left: 20px;
+
+		margin:0 auto;
+
+		font-family: 微軟正黑體;
+		font-size: 50px;
+		font-weight: 800;
+		letter-spacing: 1px;
+	}
+	.submit{
+		padding: 10px;
+		padding-right: 10px;
+		padding-left: 10px;
+
+		font-family: 微軟正黑體;
+		font-size: 50px;
+		font-weight: 800;
+		letter-spacing: 1px;
+	}
+	.select{
+		padding: 1px;
+		padding-right: 10px;
+		padding-left: 10px;
+
+		font-family: 微軟正黑體;
+		font-size: 50px;
+		font-weight: 800;
+		letter-spacing: 1px;
+	}
+	.center{
+		position: relative;
+		margin:auto;
+	}
+    </style>
+</head>
+<body class="center">
+	{% csrf_token %}
+	<form action="view.html"  method="post" class="form">
+		<label>名字：</label>
+		<input type="text" name="user_name" placeholder="輸入名字" class="select"><br>
+		<label>手機：</label>
+		<input type="text" name="phone" placeholder="輸入手機號碼" class="select"><br><br>
+		<label>吐司：</label><br>
+		<select name="toast_name" class="select">
+			<option value="無">選擇你要的吐司</option>
+			{% for toast in toast %}
+			<option value="{{ toast.products }}">{{ toast.products }}</option>
+			{% endfor %}
+		</select>
+		<select name="toast_quantity" class="select">
+			<option value="0">選擇你要的數量</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+		</select><br><br>
+
+		<label>蛋餅：</label><br>
+		<select name="egg_pancake_name" class="select">
+			<option value="無">選擇你要的蛋餅</option>
+			{% for ch in ch %}
+			<option value="{{ ch.products }}">{{ ch.products }}</option>
+			{% endfor %}
+		</select>
+		<select name="egg_pancake_quantity" class="select">
+			<option value="0">選擇你要的數量</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+		</select><br><br>
+
+		<label>飲料：</label><br>
+		<select name="drink_name" class="select">
+			<option value="無">選擇你要的飲料</option>
+			{% for drink in drink %}
+			<option value="{{ drink.products }}">{{ drink.products }}</option>
+			{% endfor %}
+		</select>
+		<select name="drink_quantity" class="select">
+			<option value="0">選擇你要的數量</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+		</select><br><br>
+		<input type="reset" value="清除資料" class="submit">
+		<input type="submit" value="送出資料" class="submit">
+	</form>
+</body>
+</html>

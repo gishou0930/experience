@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>歷史紀錄</title>
+	<style>
+    .form{
+		display: inline-block;
+		border: solid 1px black;
+		border-radius: 5px;
+
+		padding: 10px;
+		padding-right: 20px;
+		padding-left: 20px;
+
+		margin:0 auto;
+
+		font-family: 微軟正黑體;
+		font-size: 50px;
+		font-weight: 800;
+		letter-spacing: 1px;
+	}
+	.submit{
+		padding: 10px;
+		padding-right: 10px;
+		padding-left: 10px;
+
+		font-family: 微軟正黑體;
+		font-size: 50px;
+		font-weight: 800;
+		letter-spacing: 1px;
+	}
+	.center{
+        position: relative;
+        margin:auto;
+	}
+    </style>
+</head>
+<body class="center">
+    {% csrf_token %}
+    <form action="viewer_use.html"  method="post" class="form">
+        <p>歷史紀錄：</p><br>
+        {% for list_history in list_history %}
+            <p>---------------------------------</p>
+            <p>商品：{{ list_history.buy_product}}</p>
+            <p>數量：{{ list_history.buy_quantity}}</p>
+            <p>總價：{{ list_history.total_price}}</p>
+            <p>購買時間：{{ list_history.buy_time}}</p>
+        {% endfor %}
+        <p>---------------------------------</p><br>
+        <input type="submit" value="回訂餐單" class="submit">
+    </form>
+</body>
+</html>

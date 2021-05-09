@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>查詢</title>
+	<style>
+    .form{
+		display: inline-block;
+		border: solid 1px black;
+		border-radius: 5px;
+
+		padding: 10px;
+		padding-right: 20px;
+		padding-left: 20px;
+
+		margin:0 auto;
+
+		font-family: 微軟正黑體;
+		font-size: 50px;
+		font-weight: 800;
+		letter-spacing: 1px;
+	}
+	.submit{
+		padding: 10px;
+		padding-right: 10px;
+		padding-left: 10px;
+
+		font-family: 微軟正黑體;
+		font-size: 50px;
+		font-weight: 800;
+		letter-spacing: 1px;
+	}
+	.select{
+		padding: 1px;
+		padding-right: 10px;
+		padding-left: 10px;
+
+		font-family: 微軟正黑體;
+		font-size: 50px;
+		font-weight: 800;
+		letter-spacing: 1px;
+	}
+	.center{
+		position: relative;
+		margin:auto;
+	}
+    </style>
+</head>
+<body class="center">
+	{% csrf_token %}
+	<form action="search_history.html"  method="post" class="form">
+		<label>手機：</label>
+		<input type="text" name="phone" placeholder="輸入手機號碼" class="select"><br><br>
+		<input type="submit" value="查詢訂單" class="submit">
+	</form>
+</body>
+</html>
