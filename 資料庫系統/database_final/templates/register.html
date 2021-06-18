@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>註冊</title>
+	<style>
+    *{
+    margin:auto;
+    box-sizing: border-box;
+	}
+	.style1{
+    width:500px;
+    text-align: center;
+    padding:30px
+	}
+	.style2{
+    width:200px;
+	}
+	.style2 h1{
+	text-align: center;
+	color:red;
+	}
+	.button{
+	width:120px;
+	height:40px;
+	font-size:20px;
+	}
+    </style>
+</head>
+<body>
+	{% csrf_token %}
+	<div class="style1">
+		<form action="register.html"  method="post">
+			<label class="button">手機：</label>
+			<input type="text" name="phone" placeholder="輸入手機號碼" class="button"><br><br>
+			<label class="button">名稱：</label>
+			<input type="text" name="name" placeholder="輸入您的名稱" class="button"><br><br>
+			<input type="submit" value="註冊" class="button"><br><br>
+		</form>
+		<button name="product" type="submit" onclick="location.href='homepage.html'" class="button">回首頁</button>
+	</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>查詢</title>
+	<style>
+    *{
+    margin:auto;
+    box-sizing: border-box;
+	}
+	.style1{
+    width:500px;
+    text-align: center;
+    padding:30px
+	}
+	.style1 p{
+	text-align: center;
+	color:red;
+	}
+	.button{
+	width:120px;
+	height:40px;
+	font-size:20px;
+	}
+	.select{
+		width:120px;
+		height:40px;
+		font-size:20px;
+	}
+    </style>
+</head>
+<body>
+	{% csrf_token %}
+	<div class="style1">
+		<form action="search.html"  method="post">
+			<label class="button">手機：</label>
+			<input type="text" name="phone" placeholder="輸入手機號碼" class="button"><br><br>
+			<label class="button">編號：</label>
+			<input type="text" name="number" placeholder="輸入訂單編號" class="button">
+			<p>若無輸入則會顯示全部訂單</p><br><br>
+			<input type="submit" value="查詢" class="button"><br><br>
+		</form>
+		<button name="product" type="submit" onclick="location.href='homepage.html'" class="button">回首頁</button>
+	</div>
+</body>
+</html>

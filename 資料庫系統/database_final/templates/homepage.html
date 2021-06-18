@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>主頁</title>
+	<style>
+    *{
+    margin:auto;
+    box-sizing: border-box;
+	}
+	.style1{
+    width:500px;
+    text-align: center;
+    padding:30px
+	}
+	.style2{
+    width:200px;
+	}
+	.style2 h1{
+	text-align: center;
+	color:red;
+	}
+	button{
+	width:120px;
+	height:40px;
+	font-size:20px;
+	}
+    </style>
+</head>
+<body>
+	{% csrf_token %}
+	<div class="style1">
+		<button name="product" type="submit" onclick="location.href='menu.html'">產品列表</button><br><br>
+		<button name="search" type="submit" onclick="location.href='order.html'">前往訂餐</button><br><br>
+		<button name="search" type="submit" onclick="location.href='search.html'">查詢訂單</button><br><br>
+		<button name="register" type="submit" onclick="location.href='register.html'">註冊</button><br>
+	</div>
+</body>
+</html>

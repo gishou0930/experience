@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>註冊失敗</title>
+	<style>
+    *{
+    margin:auto;
+    box-sizing: border-box;
+	}
+	.style1{
+    width:500px;
+    text-align: center;
+    padding:30px
+	}
+	.style1 p{
+	text-align: center;
+	color:red;
+	}
+	.button{
+	width:120px;
+	height:40px;
+	font-size:20px;
+	}
+	.select{
+		width:120px;
+		height:40px;
+		font-size:20px;
+	}
+    </style>
+</head>
+<body>
+	{% csrf_token %}
+	<div class="style1">
+		<p>您未輸入手機號碼</p><br>
+		<button name="register" type="submit" onclick="location.href='register.html'" class="button">前往註冊</button><br><br>
+		<button name="product" type="submit" onclick="location.href='homepage.html'" class="button">回首頁</button>
+	</div>
+</body>
+</html>

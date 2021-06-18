@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>訂餐</title>
+	<style>
+    *{
+    margin:auto;
+    box-sizing: border-box;
+	}
+	.style1{
+    width:500px;
+    text-align: center;
+    padding:30px
+	}
+	.style1 p{
+	text-align: center;
+	color:red;
+	}
+	.button{
+	width:120px;
+	height:40px;
+	font-size:20px;
+	}
+	.select{
+		width:120px;
+		height:40px;
+		font-size:20px;
+	}
+    </style>
+</head>
+<body>
+	{% csrf_token %}
+	<div class="style1">
+		<p>請先註冊過後再進行訂餐</p>
+		<form action="order.html"  method="post">
+			<label class="button">手機：</label>
+			<input type="text" name="phone" placeholder="輸入手機號碼" class="button"><br><br>
+			<h1>蛋餅</h1>
+				<p>商品：培根蛋餅</p>
+				<p>價格：30</p>
+				<select name="quantity1" class="select">
+					<option value="0">選擇數量</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select><br><br>
+				<p>商品：火腿蛋餅</p>
+				<p>價格：30</p>
+				<select name="quantity2" class="select">
+					<option value="0">選擇數量</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select><br><br>
+			<h1>三明治</h1>
+				<p>商品：培根蛋三明治</p>
+				<p>價格：35</p>
+				<select name="quantity3" class="select">
+					<option value="0">選擇數量</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select><br><br>
+				<p>商品：火腿蛋三明治</p>
+				<p>價格：35</p>
+				<select name="quantity4" class="select">
+					<option value="0">選擇數量</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select><br><br>
+			<h1>飲料</h1>
+				<p>商品：奶茶</p>
+				<p>價格：25</p>
+				<select name="quantity5" class="select">
+					<option value="0">選擇數量</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select><br><br>
+				<p>商品：紅茶</p>
+				<p>價格：15</p>
+				<select name="quantity6" class="select">
+					<option value="0">選擇數量</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select><br><br>
+				<p>商品：綠茶</p>
+				<p>價格：15</p>
+				<select name="quantity7" class="select">
+					<option value="0">選擇數量</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select><br><br>
+				<p>商品：豆漿</p>
+				<p>價格：15</p>
+				<select name="quantity8" class="select">
+					<option value="0">選擇數量</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select><br><br>
+			<h1>小點心</h1>
+				<p>商品：小熱狗</p>
+				<p>價格：20</p>
+				<select name="quantity9" class="select">
+					<option value="0">選擇數量</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select><br><br>
+				<p>商品：薯條</p>
+				<p>價格：30</p>
+				<select name="quantity10" class="select">
+					<option value="0">選擇數量</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select><br><br>
+				<p>商品：薯餅</p>
+				<p>價格：15</p>
+				<select name="quantity11" class="select">
+					<option value="0">選擇數量</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select><br><br>
+			<input type="submit" value="訂餐" class="button"><br><br>
+		</form>
+		<button name="product" type="submit" onclick="location.href='homepage.html'" class="button">回首頁</button>
+	</div>
+</body>
+</html>

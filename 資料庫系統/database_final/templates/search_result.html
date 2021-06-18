@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>查詢結果</title>
+	<style>
+    *{
+    margin:auto;
+    box-sizing: border-box;
+	}
+	.style1{
+    width:500px;
+    text-align: center;
+    padding:30px
+	}
+	.style1 p{
+	text-align: left;
+	color:blue;
+	padding-left:160px
+	}
+	.style1 h2{
+	color:red;
+	}
+	.button{
+	width:120px;
+	height:40px;
+	font-size:20px;
+	}
+	.select{
+		width:120px;
+		height:40px;
+		font-size:20px;
+	}
+    </style>
+</head>
+<body>
+	{% csrf_token %}
+	<div class="style1">
+		{% for result_user in result_user %}
+			<h1>手機：{{result_user.phone}}</h1>
+			<h1>名稱：{{result_user.name}}</h1><br>
+		{% endfor %}
+		<h1>訂單狀態：準備中</h1>
+			{% for result_pay in result_pay %}
+				{% if result_pay.state.state_number == 1 %}
+				<h2>訂單編號：{{ result_pay.pay_number }}</h2><br>
+					{% for result_buy in result_buy %}
+						{% if result_buy.pay_number.pay_number == result_pay.pay_number %}
+								<p>商品：{{ result_buy.buy_product.product}}</p> <!--要再.product才會找到FK-->
+								<p>數量：{{ result_buy.quantity}}</p>
+								<p>價格：{{ result_buy.buy_price}}</p><br>
+						{% endif %}
+					{% endfor %}
+				<p>總金額：{{ result_pay.total_price }}</p><br><br>
+				{% endif %}
+			{% endfor %}
+		<h1>訂單狀態：已完成餐點</h1>
+			{% for result_pay in result_pay %}
+				{% if result_pay.state.state_number == 2 %}
+				<h2>訂單編號：{{ result_pay.pay_number }}</h2><br>
+					{% for result_buy in result_buy %}
+						{% if result_buy.pay_number.pay_number == result_pay.pay_number %}
+								<p>商品：{{ result_buy.buy_product.product}}</p> <!--要再.product才會找到FK-->
+								<p>數量：{{ result_buy.quantity}}</p>
+								<p>價格：{{ result_buy.buy_price}}</p><br>
+						{% endif %}
+					{% endfor %}
+				<p>總金額：{{ result_pay.total_price }}</p><br><br>
+				{% endif %}
+			{% endfor %}
+		<h1>訂單狀態：已取餐</h1>
+			{% for result_pay in result_pay %}
+				{% if result_pay.state.state_number == 3 %}
+				<h2>訂單編號：{{ result_pay.pay_number }}</h2><br>
+					{% for result_buy in result_buy %}
+						{% if result_buy.pay_number.pay_number == result_pay.pay_number %}
+								<p>商品：{{ result_buy.buy_product.product}}</p> <!--要再.product才會找到FK-->
+								<p>數量：{{ result_buy.quantity}}</p>
+								<p>價格：{{ result_buy.buy_price}}</p><br>
+						{% endif %}
+					{% endfor %}
+				<p>總金額：{{ result_pay.total_price }}</p><br><br>
+				{% endif %}
+			{% endfor %}
+		<br>
+		<button name="search" type="submit" onclick="location.href='search.html'" class="button">回到查詢頁</button><br><br>
+		<button name="product" type="submit" onclick="location.href='homepage.html'" class="button">回首頁</button>
+	</div>
+</body>
+</html>

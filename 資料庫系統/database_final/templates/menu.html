@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜單</title>
+	<style>
+    *{
+    margin:auto;
+    box-sizing: border-box;
+	}
+	.style2{
+    width:200px;
+    padding:30px
+	}
+	.style2 h1{
+	text-align: center;
+	color:red;
+	}
+    </style>
+</head>
+<body>
+<div class="style2">
+    <form action="homepage.html"  method="post" class="form">
+        <h1>蛋餅</h1>
+            {% for menu1 in menu1 %}
+            <p>商品：{{ menu1.product}}</p>
+            <p>價格：{{ menu1.price}}</p>
+            {% endfor %}
+        <br><h1>三明治</h1>
+            {% for menu2 in menu2 %}
+            <p>商品：{{ menu2.product}}</p>
+            <p>價格：{{ menu2.price}}</p>
+            {% endfor %}
+        <br><h1>飲料</h1>
+            {% for menu3 in menu3 %}
+            <p>商品：{{ menu3.product}}</p>
+            <p>價格：{{ menu3.price}}</p>
+            {% endfor %}
+        <br><h1>小點心</h1>
+            {% for menu4 in menu4 %}
+            <p>商品：{{ menu4.product}}</p>
+            <p>價格：{{ menu4.price}}</p>
+            {% endfor %}
+        <br>
+        <input type="submit" value="回首頁" class="submit" style="width:120px;height:40px;font-size:20px;">
+    </form>
+</div>
+</body>
+</html>
