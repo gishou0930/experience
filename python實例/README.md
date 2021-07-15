@@ -1,6 +1,13 @@
+crawler-Maicoin-RealTimeData:
+	
+	上傳時間：2021/7/15
+	利用selenium套件，獲取Maicoin即時BTC價格
+	技巧：爬蟲
+	
 crawler-maicoin：
 	
 	上傳時間：2021/7/14
+	利用requests套件
 	爬取maicoin內的BTC一年資料
 	技巧：爬蟲
 
@@ -12,6 +19,7 @@ Game-Guess-Number：
 crawler-PTTbeauty-completed：
 
 	上傳時間：2021/7/13
+	利用requests套件
 	1.爬取ptt表特版特定文章的圖片(完整版)
 	2.爬取ptt表特版最新頁面的特定關鍵字文章的圖片(可指定要爬幾頁)(更新時間：2021/7/14)
 	技巧：爬蟲
@@ -25,5 +33,6 @@ crypto-currency：
 crawler-PTTbeauty-steps：
 
 	上傳時間：2021/7/12
+	利用requests套件
 	爬取ptt表特版特定文章的圖片(分步驟版)
 	技巧：爬蟲
