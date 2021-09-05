@@ -1,3 +1,5 @@
+# Github Readme
+
 python實例：
 	
 	此為我在自行學習python之後所進行的一些實例操作
