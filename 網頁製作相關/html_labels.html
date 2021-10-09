@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--meta標籤 給搜尋引擎看得-->
+        <meta charset="UTF-8">
+        <meta name="description" content="可以放入描述，就是google後的一小段文字">
+        <meta name="author" content="Gishou">
+        <meta name="keywords" content="html入門">
+        <!--viewport視口-->
+        <!--width=device-width根據瀏覽裝置的寬度做調整 initial-scale=1.0初始縮放比為100%-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Html入門</title>
+        <!--插入css檔-->
+        <link rel="stylesheet" href="#">
+    </head>
+    <body>
+        <!--基本標籤-->
+        <h1>這是h1</h1>
+        <h2>這是h2</h2>
+        <h3>這是h3</h3>
+        <h4>這是h4</h4>
+        <h5>這是h5</h5>
+        <h6>這是h6</h6>
+        <hr>
+        <p>上面是hr水平線</p>
+        <p>這是p段落</p>
+        <p>br可以換行</p>
+        <b>b是粗體</b><br>
+        <i>i是斜體</i><br>
+        <b><i>粗體and斜體</i></b><br>
+        
+        <hr>
+        <!--連結、圖片-->
+        <a href="https://www.google.com">a可以利用href做連結，也可連結到其他自製網頁、檔案</a>
+        <p>img可以放圖片 src放jpg width height調整</p>
+        <img width="400" height="300" src="https://static.wixstatic.com/media/e6b07b_d647ba15559c44bbbab0307f0ea0890f~mv2.png/v1/fill/w_980,h_700,al_c,q_90/e6b07b_d647ba15559c44bbbab0307f0ea0890f~mv2.webp">
+        
+        <hr>
+        <!--影片、嵌入yt影片-->
+        <p>video可以放影片 src放影片 controls使影片可撥放 width height調整</p>
+        <p>yt影片右鍵 複製嵌入程式碼 可直接貼上 一樣可調整大小</p>
+        <iframe width="300" src="https://www.youtube.com/embed/CLUPkcLQm64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <hr>
+        <!--列表、表格-->
+        <p>ul或ol裡面包li</p>
+        <p>ul的列表用黑點表示</p>
+        <ul>
+            <li>google</li>
+            <li>facebook</li>
+            <li>ig</li>
+        </ul>
+        <p>ol的列表用數字排序</p>
+        <ol>
+            <li>google</li>
+            <li>facebook</li>
+            <li>ig</li>
+        </ol>
+        <p>type可以改變用什麼順序排序 A、a、i、I</p>
+        <ol type="A">
+            <li>google</li>
+            <li>facebook</li>
+            <li>ig</li>
+        </ol>
+        <hr>
+        <p>table代表創建一個表格</p>
+        <p>tr代表行</p>
+        <p>td代表行內的格</p>
+        <table>
+            <tr>
+                <td>日期</td>
+                <td>數學</td>
+                <td>英文</td>
+                <td>英文</td>
+            </tr>
+            <tr>
+                <td>2/8</td>
+                <td>80</td>
+                <td>60</td>
+            </tr>
+        </table>
+
+        <hr>
+        <!--容器div、span-->
+        <div>
+            <p>div、span是容器可以存放任何標籤</p>
+            <p>容器的意義在於可以用來排版</p>
+        </div>
+
+        <hr>
+        <!--html輸入標籤-->
+        <input type="text" placeholder="text可以輸入文字"><br>
+        <input type="password" placeholder="password可以變成暗碼"><br>
+        <p>date可以選擇日期</p>
+        <input type="date">
+        <p>range可以出現長條可拉移的槓桿</p>
+        <input type="range">
+        <p>file可以上傳檔案</p>
+        <input type="file">
+        <p>checkbox可以勾選</p>
+        <input type="checkbox"><br>
+        <textarea>textarea可以放入文章</textarea>
+    </body>
+</html>
