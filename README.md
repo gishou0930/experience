@@ -5,9 +5,13 @@ Resume：
 
 	使用Bootstrap5框架自製履歷
 
+Front-end：
+
+	此為我在自學前端之後所進行的實例操作
+
 python實例：
 	
-	此為我在自行學習python之後所進行的一些實例操作
+	此為我在自學python之後所進行的一些實例操作
 
 LIFF+Django：
 	
