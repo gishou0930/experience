@@ -1,6 +1,10 @@
 ###### tags: `Github`
 # Github Readme
 
+Resume：
+
+	使用Bootstrap5框架自製履歷
+
 python實例：
 	
 	此為我在自行學習python之後所進行的一些實例操作
