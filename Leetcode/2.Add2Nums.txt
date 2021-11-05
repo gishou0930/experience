@@ -1,0 +1,26 @@
+Python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+        head = ListNode(0) #創新的node
+        cur = head #追蹤用
+        tmp = 0 #存值、carry
+        while(l1!=None or l2!=None or tmp!=0):
+            #l1還有就+
+            if(l1!=None):
+                tmp += l1.val
+                l1 = l1.next
+            #l2還有就+
+            if(l2!=None):
+                tmp += l2.val
+                l2 = l2.next
+            #把值存在下一個新的節點
+            cur.next = ListNode(tmp%10)
+            #到下一個節點
+            cur = cur.next
+            tmp //= 10
+        return(head.next)
