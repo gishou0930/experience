@@ -1,8 +1,8 @@
 Python
 class Solution:
     def romanToInt(self, s: str) -> int:
-        pre = "a"
-        num = 0
+        pre = "a" #存之前的值
+        num = 0 #總和
         Symbols={
             "a":0,
             "I":1,
@@ -14,8 +14,9 @@ class Solution:
             "M":1000
         }
         for R in s:
-            i = Symbols.get(R)
-            j = Symbols.get(pre)
+            i = Symbols.get(R) #現在的值
+            j = Symbols.get(pre) #之前的值
+            #判斷是否前<後
             if i>j:
                 num += i
                 num -= j*2

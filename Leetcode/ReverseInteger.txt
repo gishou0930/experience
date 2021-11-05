@@ -1,0 +1,21 @@
+Python
+class Solution:
+    def reverse(self, x: int) -> int:
+        sign = 0 #0正1負
+        r = 0 #reverse
+        #判斷正負
+        if x<0:
+            sign=1
+            x*=-1
+        #Reverse
+        while(x>0):
+            r *= 10
+            r += x%10
+            x //= 10
+        #原本負就變成負
+        if sign==1:
+            r *= -1
+        #超過32bit=0
+        if r>2**31-1 or r<-2**31:
+            return(0)
+        return(r)123
