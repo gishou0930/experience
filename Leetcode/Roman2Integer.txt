@@ -1,0 +1,25 @@
+Python
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        pre = "a"
+        num = 0
+        Symbols={
+            "a":0,
+            "I":1,
+            "V":5,
+            "X":10,
+            "L":50,
+            "C":100,
+            "D":500,
+            "M":1000
+        }
+        for R in s:
+            i = Symbols.get(R)
+            j = Symbols.get(pre)
+            if i>j:
+                num += i
+                num -= j*2
+            else:
+                num += i
+            pre=R
+        return(num)
