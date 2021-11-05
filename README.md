@@ -11,6 +11,10 @@ python實例：
 	
 	此為我在自學python之後所進行的一些實例操作
 
+Leetcode：
+
+	存放一些我寫過的Leetcode
+
 LIFF+Django：
 	
 	時間：109學年第2學期
