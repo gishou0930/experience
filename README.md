@@ -1,7 +1,7 @@
 ###### tags: `Github`
 # Github Readme
 
-[自製履歷](https://gishou0930.github.io/experience/Resume/Resume.html)：
+[自製履歷](https://gishou0930.github.io/experience/Resume/Resume.html)
 
 Front-end：
 
