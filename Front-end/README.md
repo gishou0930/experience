@@ -6,3 +6,5 @@ base:
 FlexPractice:
 
 	使用Flex建構一頁簡單的商品頁
+	https://gishou0930.github.io/experience/Front-end/FlexPractice/FlexPractice.html
+	
