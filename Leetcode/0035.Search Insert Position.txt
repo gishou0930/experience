@@ -1,0 +1,9 @@
+Python3
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        cur = 0
+        for i in nums:
+            if target <= i:
+                break
+            cur += 1
+        return cur
